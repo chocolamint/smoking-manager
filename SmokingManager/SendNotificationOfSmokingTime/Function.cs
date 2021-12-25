@@ -45,7 +45,7 @@ namespace SendNotificationOfSmokingTime
                             text: $"{timeString}喫煙タイムです⏰よく我慢したね💕この時間から1本だけタバコを吸ってもいいよ🥰",
                             actions: new[]
                             {
-                                new MessageTemplateAction("吸い始める", "吸い始めたよ🚬")
+                                new MessageTemplateAction("吸い始める", $"{timeString}タバコを吸い始めたよ🚬")
                             }
                         )
                     )
