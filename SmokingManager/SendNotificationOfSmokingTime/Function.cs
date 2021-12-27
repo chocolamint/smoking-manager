@@ -28,11 +28,11 @@ namespace SendNotificationOfSmokingTime
             var now = TimeZoneInfo.ConvertTime(DateTimeOffset.Now, _jst);
             var timeString = now.TimeOfDay.Hours switch 
             {
-                var h when h >= 4 && h < 9 => "寝起きの",
-                var h when h >= 9 && h < 12 => "朝の",
-                var h when h >= 12 && h < 15 => "昼食後の",
-                var h when h >= 15 && h < 18 => "夕方の",
-                var h when h >= 18 && h < 21 => "夜の",
+                >= 4 and < 9 => "寝起きの",
+                >= 9 and < 12 => "朝の",
+                >= 12 and < 15 => "昼食後の",
+                >= 15 and < 18 => "夕方の",
+                >= 18 and < 21 => "夜の",
                 _ => "寝る前の",
             };
             var messages = new[]
